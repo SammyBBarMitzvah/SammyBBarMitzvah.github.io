@@ -25,7 +25,8 @@ window.addEventListener('load', function() {
     output = document.getElementById('nameOutput');
     input = document.getElementById('nameFormInput');
     input.focus();
-
+    let qs = getQueryString();
+    output.innerHTML = qs;
 });
 
 window.addEventListener('unload', function() {
