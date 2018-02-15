@@ -1,38 +1,11 @@
-let input;
-let output;
-let sys;
+var nameFormInput = document.getElementById('nameFormInput');
+let rsvpResults = [];
+
+function rsvpToArray() {
+    let rsvp = {
+        name: nameFormInput.value
+    };
 
 
-function getQueryString() {
-    let pairs = window.location.search.substr(1).split('&');
-    let out = {};
-
-    for (let i in pairs) {
-        let pair = pairs[i].split('=');
-        let key = pair[0];
-        let value = pair.length > 1 ? (isNaN(pair[1]) ? decodeURIComponent(pair[1].replace(/\+/g, ' ')) : parseInt(pair[1])) : true;
-        out[key] = value;
-    }
-
-    return out;
+    rsvpResults.push(rsvp);
 }
-
-window.addEventListener('load', function() {
-
-    sys = JSON.parse(localStorage.getItem('sys') || '{}');
-
-
-    output = document.getElementById('nameOutput');
-    input = document.getElementById('nameFormInput');
-    input.focus();
-    let qs = getQueryString();
-    if (qs.nameFormInput) {
-        output.innerHTML = qs.nameFormInput;
-    }
-});
-
-window.addEventListener('unload', function() {
-
-    localStorage.setItem('sys', JSON.stringify(sys));
-
-});
