@@ -1,11 +1,15 @@
-var nameFormInput = document.getElementById('nameFormInput');
-let rsvpResults = [];
+var allergies = document.getElementById('allergiesCheckBox');
+var allergiesText = document.getElementById('allergiesTextInput');
+var child = document.getElementById('childCheckBox');
 
-function rsvpToArray() {
-    let rsvp = {
-        name: nameFormInput.value
-    };
+$(allergies).click(function() {
+    $(allergiesText).toggle(this.checked);
+});
 
+function allergiesCheck() {}
 
-    rsvpResults.push(rsvp);
+function childCheck() {
+    if (child.checked) {
+
+    }
 }
