@@ -11,13 +11,11 @@
     <!-- API JS Files -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
     <div class="container">
         <div class="inputForm">
-            <form id="inputForm" class="inputForm" name="inputFormForm">
+            <form id="inputForm" class="inputForm" name="inputFormForm" method="POST">
                 <select type="text" id="prefixNameFormInput" name="prefixNameFormInput" class="prefixNameFormInput nameFormInput" required>
                         <option class="prefixNameFormInput" id="prefixNameFormInputMr" value="Mr.">Mr.</option>
                         <option class="prefixNameFormInput" id="prefixNameFormInputMrs" value="Mrs.">Mrs.</option>
@@ -41,10 +39,10 @@
 
 
     <p id="test"></p>
-    <button><a href="file:///C:/Users/Hairy/Desktop/Sammy's%20BM%20Stuff/index.html">Homepage</a></button>
-        <!-- Google Reference sign in (I think) -->
-         <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
-    <button id="signout-button" onclick="handleSignOutClick()">Sign out</button> 
+    <button><a href="https://sammybbarmitzvah.github.io">Homepage</a></button>
+    <!-- Google Reference sign in (I think) -->
+    <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
+    <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
 </body>
 
 </html>
