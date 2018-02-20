@@ -35,7 +35,7 @@
 <div class="form_container">
 <?php
 // Config
-$redirect = "https://sammybbarmitzvah.github.io/Google-OAuth.php"; // Enter your API Callback URL here
+$redirect = "https://sammybbarmitzvah.github.io/google-oauth.php"; // Enter your API Callback URL here
 $client_id = "221800871473-uh5k0t8fdojanvsrqemg0tt1te0iott1.apps.googleusercontent.com"; // Enter your API Client ID Here
 $client_secret = "FW3YuGe7ZpS1uCgHdOMQBOsU"; // Enter your API Client Secret here
 // Check Code
@@ -76,7 +76,8 @@ if(empty($_GET['code'])) {
 <div class="footer_container">
 <div class="footer">
 <div class="footer_text">
-<h3><a href="http://www.snydergroupinc.com" target="_blank"></a></h3>
+<h3><a href="http://www.snydergroupinc.com" target="_blank">SnyderGroupInc.com</a></h3>
+Copyright &copy; 2017 Snyder Group Inc. - All Right Reserved
 </div>
 </div>
 </div>
