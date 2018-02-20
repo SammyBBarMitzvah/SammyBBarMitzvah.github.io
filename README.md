@@ -9,3 +9,6 @@ Quick links:
 [Developer Console](https://console.cloud.google.com/apis/credentials?project=sammy-beck-bm)
 
 [API Reference](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/append)
+
+
+[POST to Spreadsheet](https://sheets.googleapis.com/v4/spreadsheets/1OpsZ84MASlEOexzn6PGCynygfywM2Nk_lW2BVJSpC7Y/values/A1:append?includeValuesInResponse=false&insertDataOption=INSERT_ROWS&responseDateTimeRenderOption=SERIAL_NUMBER&responseValueRenderOption=FORMATTED_VALUE&valueInputOption=USER_ENTERED&key={AIzaSyByBvp1W85-6w3_U_35ayIqbqgCESJCw6s})
