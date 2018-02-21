@@ -7,9 +7,9 @@ $(allergies).click(function() {
     $(allergiesText).toggle(this.checked);
 });
 
-$(child).click(function() {
+if (child.clicked) {
     $(meal).toggle(this.checked);
-});
+}
 
 function getFormData() {
     var form = document.getElementById("gform");
