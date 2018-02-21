@@ -16,7 +16,7 @@ $(child).click(function() {
         $(meal).fadeIn(100);
     $(meal).toggle(this.checked);
 }
-
+});
 function getFormData() {
     var form = document.getElementById("gform");
     var elements = form.elements; // all form elements
