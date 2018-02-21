@@ -1,18 +1,15 @@
 var allergies = document.getElementById('allergiesCheckBox');
 var allergiesText = document.getElementById('allergiesTextInput');
 var child = document.getElementById('childCheckBox');
+var meal = document.getElementById('mealOption');
 
 $(allergies).click(function() {
     $(allergiesText).toggle(this.checked);
 });
 
-function allergiesCheck() {}
-
-function childCheck() {
-    if (child.checked) {
-
-    }
-}
+$(child).click(function() {
+    $(meal).toggle(this.checked);
+});
 
 function getFormData() {
     var form = document.getElementById("gform");
@@ -54,7 +51,7 @@ function getFormData() {
 
     // add form-specific values into the data
     data.formDataNameOrder = JSON.stringify(fields);
-    data.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+    data.formGoogleSheetName = form.dataset.sheet || "Sammy Beck BM RSVP"; // default sheet name
 
     console.log(data);
     return data;
