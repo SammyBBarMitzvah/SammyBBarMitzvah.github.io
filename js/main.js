@@ -14,7 +14,6 @@ $(child).click(function() {
         $(meal).fadeOut(100);
     } else {     
         $(meal).show();
-    $(meal).toggle(this.checked);
 }
 });
 function getFormData() {
