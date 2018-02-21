@@ -3,12 +3,18 @@ var allergiesText = document.getElementById('allergiesTextInput');
 var child = document.getElementById('childCheckBox');
 var meal = document.getElementById('mealOption');
 
+// Adding Allergies box when allergies is checked
 $(allergies).click(function() {
     $(allergiesText).toggle(this.checked);
 });
 
-if (child.clicked) {
-    $(meal).toggle(child.checked);
+//Removing meal option if child is checked
+$(child).click(function() {
+    if ($(this).is(':checked')){
+        $(meal).fadeOut(100);
+    } else {     
+        $(meal).fadeIn(100);
+    $(meal).toggle(this.checked);
 }
 
 function getFormData() {
