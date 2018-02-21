@@ -13,7 +13,7 @@ $(child).click(function() {
     if ($(this).is(':checked')){
         $(meal).fadeOut(100);
     } else {     
-        $(meal).fadeIn(100);
+        $(meal).show();
     $(meal).toggle(this.checked);
 }
 });
