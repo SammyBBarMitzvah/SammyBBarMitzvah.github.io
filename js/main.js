@@ -51,7 +51,7 @@ function getFormData() {
 
     // add form-specific values into the data
     data.formDataNameOrder = JSON.stringify(fields);
-    data.formGoogleSheetName = form.dataset.sheet || "Sammy Beck BM RSVP"; // default sheet name
+    data.formGoogleSheetName = form.dataset.sheet || "Sammy Beck BM RSVP"; // default sheet name, changed from responses
 
     console.log(data);
     return data;
