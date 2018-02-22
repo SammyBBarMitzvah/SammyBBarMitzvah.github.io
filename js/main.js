@@ -5,13 +5,13 @@ var meal = document.getElementById('mealOption');
 
 // Adding Allergies box when allergies is checked
 $(allergies).click(function() {
-    $(allergiesText).toggle(this.checked);
+    $(allergiesText).slideToggle(300);
 });
 
 //Removing meal option if child is checked
 $(child).click(function() {
     if ($(this).is(':checked')){
-        $(meal).fadeOut(100);
+        $(meal).fadeOut(300);
     } else {     
         $(meal).show();
 }
