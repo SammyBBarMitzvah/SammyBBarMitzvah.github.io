@@ -12,8 +12,11 @@ $(allergies).click(function() {
 $(child).click(function() {
     if ($(this).is(':checked')){
         $(meal).fadeOut(300);
+        meal.selectedIndex = 3;
+        
     } else {     
         $(meal).show();
+        meal.selectedIndex = 0;
 }
 });
 function getFormData() {
