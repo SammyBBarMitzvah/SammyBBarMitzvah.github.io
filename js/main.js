@@ -19,8 +19,9 @@ $(child).click(function() {
         meal.selectedIndex = 0;
 }
 });
+
 function getFormData() {
-    var form = document.getElementById("gform");
+    var form = document.getElementById('gform');
     var elements = form.elements; // all form elements
 
     var fields = Object.keys(elements).map(function(k) {
