@@ -11,24 +11,26 @@
     <!-- API JS Files -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
+
     </script>
     <div class="container">
         <div class="inputForm">
             <form id="gform" class="inputForm" name="inputFormForm" method="POST" action="https://script.google.com/macros/s/AKfycbx_QKRztLhjSnNBLC1an5k14JxD7Txkt80wWzY1FeLu22g8lc2-/exec">
-                <select type="text" id="prefixNameFormInput" name="prefixNameFormInput" class="prefixNameFormInput nameFormInput" required>
+                <select type="text" id="prefixNameFormInput" name="Prefix" class="prefixNameFormInput nameFormInput" required>
                         <option class="prefixNameFormInput" id="prefixNameFormInputMr" value="Mr.">Mr.</option>
                         <option class="prefixNameFormInput" id="prefixNameFormInputMrs" value="Mrs.">Mrs.</option>
                         <option class="prefixNameFormInput" id="prefixNameFormInputMs" value="Ms.">Ms.</option>
-                    <input type="text" id="nameFormInput" name="nameFormInput" class="nameFormInput" placeholder="Enter your name">
-                    <label id="childCheckBoxLabel" class="childCheckBox childCheckBoxLabel">Child?</label><input type="checkbox" class="childCheckBox" id="childCheckBox" onclick="childCheck()">
-                    <select type="text" class="mealOption" name="mealOption" required>
+                    <input type="text" id="firstNameFormInput" name="FirstName" class="nameFormInput" placeholder="First Name">
+                    <input type="text" id="lastNameFormInput" name="LastName" class="nameFormInput" placeholder="Last Name">
+                    <label id="childCheckBoxLabel" class="childCheckBox childCheckBoxLabel">Child?</label><input type="checkbox" class="childCheckBox" id="childCheckBox" name="Child">
+                    <select type="text" class="mealOption" id="mealOption" name="Meal" required>
                 <option class="mealOption" id="mealOptionSteak" value="Steak">Steak</option>
                 <option class="mealOption" id="mealOptionFish" value="Fish">Fish</option>
                 <option class="mealOption" id="mealOptionVeg" value="Vegetarian">Vegetarian</option>
+                <option class="mealOption mealOptionChild" id="mealOptionChild" value="" style="display:none"></option>
             </select>
                 <label id="allergiesCheckBoxLabel" class="allergiesCheckBox allergiesCheckBoxLabel">Allergies?</label><input type="checkbox" class="allergiesCheckBox" id="allergiesCheckBox">
-                <input type="text" id="allergiesTextInput" class="allergiesTextInput" style="display:none">
+                <input type="text" id="allergiesTextInput" class="allergiesTextInput" name="Allergies" style="display:none">
                 <input type="submit" id="nameFormSubmit" class="nameFormSubmit">
             </form>
         </div>
@@ -40,9 +42,8 @@
 
     <p id="test"></p>
     <button><a href="https://sammybbarmitzvah.github.io">Homepage</a></button>
-    <!-- Google Reference sign in (I think) -->
-    <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
-    <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
+
+
 </body>
 
 </html>
