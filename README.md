@@ -14,3 +14,5 @@ Quick links:
 [POST to Spreadsheet](https://sheets.googleapis.com/v4/spreadsheets/1OpsZ84MASlEOexzn6PGCynygfywM2Nk_lW2BVJSpC7Y/values/A1:append?includeValuesInResponse=false&insertDataOption=INSERT_ROWS&responseDateTimeRenderOption=SERIAL_NUMBER&responseValueRenderOption=FORMATTED_VALUE&valueInputOption=USER_ENTERED&key={AIzaSyByBvp1W85-6w3_U_35ayIqbqgCESJCw6s})
 
 [Rayzr's Reference](https://www.npmjs.com/package/html-form-send-email-via-google-script-without-server)
+
+[Import Example MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
