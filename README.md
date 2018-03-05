@@ -16,3 +16,5 @@ Quick links:
 [Rayzr's Reference](https://www.npmjs.com/package/html-form-send-email-via-google-script-without-server)
 
 [Import Example MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+
+[Ask for help on the github itself](https://github.com/dwyl/html-form-send-email-via-google-script-without-server/issues/new)...duh
