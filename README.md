@@ -17,4 +17,4 @@ Quick links:
 
 [Import Example MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 
-[Ask for help on the github itself](https://github.com/dwyl/html-form-send-email-via-google-script-without-server/issues/new)...duh
+[Support Request](https://github.com/dwyl/html-form-send-email-via-google-script-without-server/issues/204)
