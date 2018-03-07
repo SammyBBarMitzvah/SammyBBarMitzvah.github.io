@@ -3,3 +3,7 @@ body {
     font-size: 1em;
     padding: 0px;
 }
+
+input[type=text] {
+    padding: 5px 9px;
+}
