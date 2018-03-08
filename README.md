@@ -20,3 +20,5 @@ Quick links:
 [Support Request](https://github.com/dwyl/html-form-send-email-via-google-script-without-server/issues/204)
 
 [Waze Adress](https://www.waze.com/location?ll=39.208051,-76.939684)
+
+[Amplify JS](https://stackoverflow.com/a/31772310/9415678)
