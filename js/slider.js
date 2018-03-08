@@ -3,3 +3,5 @@
         slider.oninput = function() {
             output.innerHTML = this.value;
         }
+        
+amplify.store('peopleCount', 'slider.value');
