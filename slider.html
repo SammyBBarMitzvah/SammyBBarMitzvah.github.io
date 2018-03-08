@@ -17,6 +17,13 @@
         </form>
         <h4 class="valueOutput">Number of People: <span id="valueOutput" class="valueOutput">1</span></h4>
     </div>
+    <script>
+        var slider = document.getElementById('slider');
+        var output = document.getElementById('valueOutput');
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+    </script>
 </body>
 
 </html>
