@@ -60,7 +60,7 @@ function getFormData() {
 
     // add form-specific values into the data
     data.formDataNameOrder = JSON.stringify(fields);
-    data.formGoogleSheetName = form.dataset.sheet || "Sammy Beck BM RSVP"; // default sheet name, changed from responses
+    data.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name, changed from responses
 
     console.log(data);
     return data;
@@ -94,6 +94,6 @@ function loaded() {
     // bind to the submit event of our form
     var form = document.getElementById('gform');
     form.addEventListener("submit", handleFormSubmit, false);
-};
+}
 
 document.addEventListener('DOMContentLoaded', loaded, false);
