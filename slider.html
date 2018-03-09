@@ -14,7 +14,7 @@
     <div id="sliderFormDiv" class="sliderForm">
         <form id="sliderForm" name="sliderForm">
             <input type="range" min="1" max="10" value="1" class="sliderForm slider" id="slider">
-            <input type="submit" value="Confirm" id="submitSlider" class="sliderForm sliderFormButton">
+            <input type="submit" value="Confirm" id="submitSlider" class="sliderForm sliderFormButton" onclick="submit()">
         </form>
         <h4 class="valueOutput">Number of People: <span id="valueOutput" class="valueOutput">1</span></h4>
     </div>
@@ -23,6 +23,9 @@
         var output = document.getElementById('valueOutput');
         slider.oninput = function() {
             output.innerHTML = this.value;
+        }
+        function submit() {
+        amplify.store('peopleCount', 'slider.value');
         }
     </script>
 </body>
