@@ -1,13 +1,20 @@
-var getQueryString = function ( field, url ) {
-	var href = url ? url : window.location.href;
-	var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
-	var string = reg.exec(href);
-	return string ? string[1] : null;
-};
+function getQueryString() {
+    let pairs = window.location.search.substr(1).split('&');
+    let out = {};
+
+    for (let i in pairs) {
+        let pair = pairs[i].split('=')
+        let key = pair[0];
+        let value = pair.length > 1 ? (isNaN(pair[1]) ? decodeURIComponent(pair[1].replace(/\+/g, ' ')) : parseInt(pair[1])) : true;
+        out[key] = value;
+    }
+
+    return out;
+}
 
 
 function submit() {
- var param = getQueryString('peopleAttending');
+ var param = getQueryString();
  window.location.assign('https://sammybbarmitzvah.github.io/?peopleAttending=' + param);
 }
 
