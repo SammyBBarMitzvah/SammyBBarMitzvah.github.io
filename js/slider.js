@@ -1,14 +1,13 @@
-function getUrlParameter(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+var getQueryString = function ( field, url ) {
+	var href = url ? url : window.location.href;
+	var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+	var string = reg.exec(href);
+	return string ? string[1] : null;
 };
 
 
 function submit() {
- let redirect = "https://sammybbarmitzvah.github.io/peopleAttending="
- let param = getUrlParameter('peopleAttending');
+ var param = getQueryString('peopleAttending');
  window.location.assign('https://sammybbarmitzvah.github.io/?peopleAttending=' + param);
 }
 
