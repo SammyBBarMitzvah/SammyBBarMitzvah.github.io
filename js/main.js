@@ -10,14 +10,14 @@ $(allergies).click(function() {
 
 //Removing meal option if child is checked
 $(child).click(function() {
-    if ($(this).is(':checked')){
+    if ($(this).is(':checked')) {
         $(meal).fadeOut(300);
         meal.selectedIndex = 3;
-        
-    } else {     
+
+    } else {
         $(meal).show();
         meal.selectedIndex = 0;
-}
+    }
 });
 
 function getFormData() {

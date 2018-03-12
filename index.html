@@ -5,38 +5,52 @@
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
 <body>
     <!-- API JS Files -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- 
+
     <div class="container">
-        <div class="inputForm">
-            <form id="gform" class="inputForm" name="inputFormForm" method="POST" action="https://script.google.com/macros/s/AKfycbx_QKRztLhjSnNBLC1an5k14JxD7Txkt80wWzY1FeLu22g8lc2-/exec" autocomplete="off">
-                <select type="text" id="prefixNameFormInput" name="Prefix" class="prefixNameFormInput nameFormInput" required>
-                        <option class="prefixNameFormInput" id="prefixNameFormInputMr" value="Mr.">Mr.</option>
-                        <option class="prefixNameFormInput" id="prefixNameFormInputMrs" value="Mrs.">Mrs.</option>
-                        <option class="prefixNameFormInput" id="prefixNameFormInputMs" value="Ms.">Ms.</option>
-                </select>
-                    <input type="text" id="firstNameFormInput" name="FirstName" class="nameFormInput" placeholder="First Name">
-                    <input type="text" id="lastNameFormInput" name="LastName" class="nameFormInput" placeholder="Last Name">
-                    <label id="childCheckBoxLabel" class="childCheckBox childCheckBoxLabel">Child?</label><input type="checkbox" class="childCheckBox" id="childCheckBox" name="Child">
-                    <select type="text" class="mealOption" id="mealOption" name="Meal" required>
-                <option class="mealOption" id="mealOptionSteak" value="Steak">Steak</option>
-                <option class="mealOption" id="mealOptionFish" value="Fish">Fish</option>
-                <option class="mealOption" id="mealOptionVeg" value="Vegetarian">Vegetarian</option>
-                <option class="mealOption mealOptionChild" id="mealOptionChild" value="" style="display:none"></option>
-            </select>
-                <label id="allergiesCheckBoxLabel" class="allergiesCheckBox allergiesCheckBoxLabel">Allergies?</label><input type="checkbox" class="allergiesCheckBox" id="allergiesCheckBox">
-                <input type="text" id="allergiesTextInput" class="allergiesTextInput" name="Allergies" style="display:none">
-                <input type="submit" id="nameFormSubmit" class="nameFormSubmit">
-            </form>
+        <div class="block">
+            <div class="box">
+                <div class="inputForm">
+                    <form id="gform" class="inputForm" name="inputFormForm" method="POST" action="https://script.google.com/macros/s/AKfycbx_QKRztLhjSnNBLC1an5k14JxD7Txkt80wWzY1FeLu22g8lc2-/exec" autocomplete="off">
+                        <div class="select">
+                            <select type="text" id="prefixNameFormInput" name="Prefix" class="prefixNameFormInput nameFormInput" required>
+                                <option class="prefixNameFormInput" id="prefixNameFormInputMr" value="Mr.">Mr.</option>
+                                <option class="prefixNameFormInput" id="prefixNameFormInputMrs" value="Mrs.">Mrs.</option>
+                                <option class="prefixNameFormInput" id="prefixNameFormInputMs" value="Ms.">Ms.</option>
+                            </select>
+                        </div>
+                        <div class- "field">
+                            <input type="text" id="firstNameFormInput" name="FirstName" class="nameFormInput input" placeholder="First Name">
+                        </div>
+                        <input type="text" id="lastNameFormInput" name="LastName" class="nameFormInput input" placeholder="Last Name">
+                        <label id="childCheckBoxLabel" class="childCheckBox childCheckBoxLabel label">Child?
+                            <input type="checkbox" class="childCheckBox" id="childCheckBox" name="Child">
+                        </label>
+
+                        <div class="select">
+                            <select type="text" class="mealOption" id="mealOption" name="Meal" required>
+                                <option class="mealOption" id="mealOptionSteak" value="Steak">Steak</option>
+                                <option class="mealOption" id="mealOptionFish" value="Fish">Fish</option>
+                                <option class="mealOption" id="mealOptionVeg" value="Vegetarian">Vegetarian</option>
+                                <option class="mealOption mealOptionChild" id="mealOptionChild" value="" style="display:none"></option>
+                            </select>
+                        </div>
+                        <label id="allergiesCheckBoxLabel" class="allergiesCheckBox allergiesCheckBoxLabel label">Allergies?</label><input type="checkbox" class="allergiesCheckBox checkbox" id="allergiesCheckBox">
+                        <input type="text" id="allergiesTextInput" class="allergiesTextInput" name="Allergies" style="display:none">
+                        <input type="submit" id="nameFormSubmit" class="nameFormSubmit button">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     <!-- My JS Files -->
-    <script src="AmplifyJS/amplify.min.js"></script>
     <script src="js/main.js" type="text/javascript"></script>
 
 
