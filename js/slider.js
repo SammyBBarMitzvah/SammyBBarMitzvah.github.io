@@ -15,6 +15,6 @@ function getQueryString() {
 
 function submit() {
  var param = getQueryString();
- window.location.assign('https://sammybbarmitzvah.github.io/?peopleAttending=' + param);
+ window.location.replace('https://sammybbarmitzvah.github.io/?peopleAttending=' + param);
 }
 
