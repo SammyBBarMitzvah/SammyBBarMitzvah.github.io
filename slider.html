@@ -17,7 +17,17 @@
             <input type="range" min="1" max="10" value="1" class="sliderForm slider" id="slider" name="peopleAttending">
             <input type="submit" value="Confirm" id="submitSlider" class="sliderForm sliderFormButton button is-primary" onclick="submit()">
         </form>
-            <div class="label"><h4 class="valueOutput">Number of People: </div><span id="valueOutput" class="valueOutput">1</span></h4>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-content">
+                    <div class="label">
+                        <h4 class="valueOutput">
+                            Number of People: 
+                        </div>
+                        <span id="valueOutput" class="valueOutput">1</span></h4>
+                </div>
+            </div>
+        </div>
     <script>
         var slider = document.getElementById('slider');
         var output = document.getElementById('valueOutput');
