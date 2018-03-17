@@ -1,7 +1,9 @@
-$('#modal-open').click(function() {
+
+
+$('#modalOpen').click(function() {
     $('.modal').addClass('is-active');
 });
 
-$('.modal-close').click(function() {
+$('#submitSlider').click(function() {
     $('.modal').removeClass('is-active');
 });
