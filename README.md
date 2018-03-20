@@ -2,7 +2,7 @@
 
 # Quick links: 
 
-# Bulma
+## Bulma
 
 [Bulma](https://bulma.io/documentation/elements/box/)
 
@@ -11,7 +11,7 @@
 [Footer Idea](https://tutorialzine.com/media/2015/01/large.jpg)
 
 
-# Extras
+## Extras
 
 
 [Spreadsheet](https://docs.google.com/spreadsheets/d/1OpsZ84MASlEOexzn6PGCynygfywM2Nk_lW2BVJSpC7Y/edit#gid=0)
