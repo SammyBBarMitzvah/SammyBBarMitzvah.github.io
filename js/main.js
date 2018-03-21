@@ -10,14 +10,22 @@ $(allergies).click(function() {
 
 //Removing meal option if child is checked
 $(child).click(function() {
-    if ($(this).is(':checked')){
-        $(meal).fadeOut(300);
+    if ($(this).is(':checked')) {
+        $('.childSelect').fadeOut(300);
         meal.selectedIndex = 3;
-        
-    } else {     
-        $(meal).show();
+
+    } else {
+        $('.childSelect').show();
         meal.selectedIndex = 0;
-}
+    }
+});
+
+$('#modalOpen').click(function() {
+    $('.modal').addClass('is-active');
+});
+
+$('#submitSlider').click(function() {
+    $('.modal').removeClass('is-active');
 });
 
 function getFormData() {
