@@ -64,7 +64,7 @@
                         <label id="childCheckBoxLabel" class="childCheckBox childCheckBoxLabel label">Child?
                             <input type="checkbox" class="childCheckBox" id="childCheckBox" name="Child">
                         </label>
-                        <div class="field">
+                        <div class="field is-grouped">
                             <div class="select childSelect">
                                 <select type="text" class="mealOption" id="mealOption" name="Meal" required>
                                 <option class="mealOption" id="mealOptionSteak" value="Steak">Steak</option>
@@ -73,10 +73,11 @@
                                 <option class="mealOption mealOptionChild" id="mealOptionChild" value="" style="display:none"></option>
                             </select>
                             </div>
-                        </div>
+                        
                         <label id="allergiesCheckBoxLabel" class="allergiesCheckBox allergiesCheckBoxLabel label">Allergies?
                             <input type="checkbox" class="allergiesCheckBox checkbox" id="allergiesCheckBox"></label>
                         <input type="text" id="allergiesTextInput" class="allergiesTextInput" name="Allergies" style="display:none">
+                            </div>
                         <input type="submit" id="nameFormSubmit" class="nameFormSubmit button">
                     </form>
                 </div>
