@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> RSVP </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item">
+                <!-- Logo (Home) -->
+                <img class="" src="http://via.placeholder.com/32x32" width="32" height="32" alt="Sammy's Bar mitzvah">
+            </a>
+            <div class="navbar-burger burger" data-target="navbar-main">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item" alt="Home"> Home <!-- Home -->
+                        </a>
+                <a href="rsvp.html" class="navbar-item" alt="RSVP">RSVP <!-- RSVP -->
+                        </a>
+                <a href="about.html" class="navbar-item" alt="About">About <!-- About -->
+                        </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="block">
+            <div class="box">
+                <div class="inputForm">
+                    <form id="gform" class="inputForm" name="inputFormForm" method="POST" action="https://script.google.com/macros/s/AKfycbx_QKRztLhjSnNBLC1an5k14JxD7Txkt80wWzY1FeLu22g8lc2-/exec" autocomplete="off">
+                        <div class="columns">
+                            <div class="column is-narrow">
+                                <div class="select">
+                                    <select type="text" id="prefixNameFormInput" name="Prefix" class="prefixNameFormInput nameFormInput" required>
+                                    <option class="prefixNameFormInput" id="prefixNameFormInputMr" value="Mr.">Mr.</option>
+                                    <option class="prefixNameFormInput" id="prefixNameFormInputMrs" value="Mrs.">Mrs.</option>
+                                    <option class="prefixNameFormInput" id="prefixNameFormInputMs" value="Ms.">Ms.</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <input type="text" id="firstNameFormInput" name="FirstName" class="nameFormInput input" placeholder="First Name">
+                            </div>
+                            <div class="column">
+                                <input type="text" id="lastNameFormInput" name="LastName" class="nameFormInput input" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <label class="label attendingLabel"> Are you attending?
+                                <input type="checkbox" class="checkbox attendingBox" name="Attending" checked></label>
+                        <label id="childCheckBoxLabel" class="childCheckBox childCheckBoxLabel label">Child?
+                                <input type="checkbox" class="childCheckBox" id="childCheckBox" name="Child">
+                            </label>
+                        <div class="field">
+                            <div class="select childSelect">
+                                <select type="text" class="mealOption" id="mealOption" name="Meal" required>
+                                    <option class="mealOption" id="mealOptionSteak" value="Steak">Steak</option>
+                                    <option class="mealOption" id="mealOptionFish" value="Fish">Fish</option>
+                                    <option class="mealOption" id="mealOptionVeg" value="Vegetarian">Vegetarian</option>
+                                    <option class="mealOption mealOptionChild" id="mealOptionChild" value="" style="display:none"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <label id="allergiesCheckBoxLabel" class="allergiesCheckBox allergiesCheckBoxLabel label">Allergies?
+                                <input type="checkbox" class="allergiesCheckBox checkbox" id="allergiesCheckBox"></label>
+                        <input type="text" id="allergiesTextInput" class="allergiesTextInput" name="Allergies" style="display:none">
+
+
+                        <input type="submit" id="nameFormSubmit" class="nameFormSubmit button">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="modal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <form id="sliderForm" name="sliderForm">
+                    <div class="block">
+                        <div class="box">
+                            <div class="columns">
+                                <div class="column">
+                                    <p class="title is-3">1</p>
+                                    <input type="radio" name="peopleAttending" value="1" class="peopleAttending">
+                                </div>
+                                <div class="column">
+                                    <p class="title is-3">2</p>
+                                    <input type="radio" name="peopleAttending" value="2" class="peopleAttending">
+                                </div>
+                                <div class="column">
+                                    <p class="title is-3">3</p>
+                                    <input type="radio" name="peopleAttending" value="3" class="peopleAttending">
+                                </div>
+                                <div class="column">
+                                    <p class="title is-3">4</p>
+                                    <input type="radio" name="peopleAttending" value="4" class="peopleAttending">
+                                </div>
+                                <div class="column">
+                                    <p class="title is-3">5</p>
+                                    <input type="radio" name="peopleAttending" value="5" class="peopleAttending">
+                                </div>
+                                <div class="column">
+                                    <p class="title is-3">6</p>
+                                    <input type="radio" name="peopleAttending" value="6" class="peopleAttending">
+                                </div>
+                                <div class="column">
+                                    <p class="title is-3">7</p>
+                                    <input type="radio" name="peopleAttending" value="7" class="peopleAttending">
+                                </div>
+                                <div class="column">
+                                    <p class="title is-3">8</p>
+                                    <input type="radio" name="peopleAttending" value="8" class="peopleAttending">
+                                </div>
+                                <div class="column">
+                                    <p class="title is-3">9</p>
+                                    <input type="radio" name="peopleAttending" value="9" class="peopleAttending">
+                                </div>
+                                <div class="column">
+                                    <p class="title is-3">10</p>
+                                    <input type="radio" name="peopleAttending" value="10" class="peopleAttending">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <input type="range" min="1" max="10" value="1" class="sliderForm slider" id="slider" name="peopleAttending"> -->
+                    <input type="submit" value="Confirm" id="submitSlider" class="sliderForm sliderFormButton button is-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <a class="button is-large modal-button" data-target="modal" id="modalOpen">Open Modal</a>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="content">
+                <div class="columns is-centered is-mobile">
+                    <div class="column is-narrow">
+                        <a href="https://github.com/SammyBBarMitzvah/sammybbarmitzvah.github.io" class="footerButton button">
+                            <span class="icon" style="margin-right: 0.5;margin-right: 1px;">
+                                                                <i class="fab fa-github"> </i>
+                                                            </span> GitHub
+                        </a>
+                    </div>
+                    <div class="column is-narrow">
+                        <a href="mailto:joshuaebeck@gmail.com?cc=lauriezbeck@gmail.com&subject=Sammy's%20Barmitzvah" class="footerButton button">
+                            <span class="icon" style="margin-right: 0.5;margin-right: 1px;">
+                                                            <i class="far fa-envelope"> </i>
+                                                        </span> Email
+                        </a>
+                    </div>
+                    <div class="column is-narrow">
+                        <a href="https://sammybbarmitzvah.github.io/wazeapi.html" class="footerButton button">
+                            <span class="icon" style="margin-right: 1px;">
+                                                                    <i class="fas fa-map-marker-alt"></i>
+                                                                </span>Directions
+                        </a>
+                    </div>
+                    <!--
+                                                    <div class="column is-narrow">
+                                                        <a class="footerButton button" href="#">
+                                                            <span class="icon" style="margin-right: 1px;">
+                                                                <i class=""></i>
+                                                            </span>WRITE HERE
+                                                        </a>
+                                                    </div> -->
+
+                </div>
+
+                <p style="text-align: center;">
+                    This website was made and developed by <strong>Alex Beck</strong> using <a href="https://bulma.io/">Bulma</a>
+                </p>
+
+            </div>
+            <!-- Meet Sammy -->
+
+        </div>
+    </footer>
+
+
+    <script src="js/formsubmit.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/navbarjs.js" type="text/javascript"></script>
+    <script src="js/rsvp.js" type="text/javascript"></script>
+
+</body>
+
+</html>
