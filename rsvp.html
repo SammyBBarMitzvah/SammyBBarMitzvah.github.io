@@ -65,13 +65,20 @@
                         </div>
 
                         <label class="label attendingLabel"> Are you attending?
-                                <input type="checkbox" class="checkbox attendingBox" name="Attending" checked></label>
-                        <label id="childCheckBoxLabel" class="childCheckBox childCheckBoxLabel label">Child?
-                                <input type="checkbox" class="childCheckBox" id="childCheckBox" name="Child">
+                                <input type="checkbox" class="checkbox attendingBox" name="Attending" id="attendingCheck" checked>
+                            </label>
+                        <div class="attendingReason" style="display:none;">
+                            <p class="title is-3" id="reasonAttendingLabel">May we ask why you cannot attend?</p>
+                            <textarea class="textarea" id="reasonAttendingText" name="Reason"></textarea>
+                        </div>
+
+
+                        <label id="childCheckBoxLabel" class="childCheckBox childCheckBoxLabel label formClass">Child?
+                                <input type="checkbox" class="childCheckBox formClass" id="childCheckBox" name="Child">
                             </label>
                         <div class="field">
-                            <div class="select childSelect">
-                                <select type="text" class="mealOption" id="mealOption" name="Meal" required>
+                            <div class="select childSelect formClass">
+                                <select type="text" class="mealOption formClass" id="mealOption" name="Meal" required>
                                     <option class="mealOption" id="mealOptionSteak" value="Steak">Steak</option>
                                     <option class="mealOption" id="mealOptionFish" value="Fish">Fish</option>
                                     <option class="mealOption" id="mealOptionVeg" value="Vegetarian">Vegetarian</option>
@@ -79,9 +86,9 @@
                                 </select>
                             </div>
                         </div>
-                        <label id="allergiesCheckBoxLabel" class="allergiesCheckBox allergiesCheckBoxLabel label">Allergies?
-                                <input type="checkbox" class="allergiesCheckBox checkbox" id="allergiesCheckBox"></label>
-                        <input type="text" id="allergiesTextInput" class="allergiesTextInput input" name="Allergies" style="display:none">
+                        <label id="allergiesCheckBoxLabel" class="allergiesCheckBox allergiesCheckBoxLabel label formClass">Allergies?
+                                <input type="checkbox" class="allergiesCheckBox checkbox formClass" id="allergiesCheckBox"></label>
+                        <input type="text" id="allergiesTextInput" class="allergiesTextInput input formClass" name="Allergies" style="display:none">
 
 
                         <input type="submit" id="nameFormSubmit" class="nameFormSubmit button" onclick="validateForm()">
