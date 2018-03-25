@@ -4,7 +4,7 @@ var child = document.getElementById('childCheckBox');
 var meal = document.getElementById('mealOption');
 var attending = document.getElementById('attendingCheck');
 var attendingReason = document.getElementById('reasonAttendingText');
-
+var attendingOutput = document.getElementById('attendingOutput');
 
 // Toggle the required modifer on forms
 function toggleRequired(e) {
@@ -33,9 +33,7 @@ $(child).click(function() {
 $(attending).click(function() {
     if (!($(this).is(':checked'))) {
         $('.formClass').fadeOut(400);
-        $('.attendingReason').fadeIn(300);
-
-        toggleRequired(attendingReason);
+        attendingOutput.innerHTML = 'No';
     } else {
         $('.formClass').fadeIn(300);
         $('#allergiesTextInput').hide();
@@ -43,6 +41,7 @@ $(attending).click(function() {
             $(allergiesText).show();
         }
         $('.attendingReason').fadeOut(400);
+        attendingOutput.innerHTML = 'Yes';
     }
 });
 
