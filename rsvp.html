@@ -25,11 +25,17 @@
         <div id="navbar-main" class="navbar-menu">
             <div class="navbar-start">
                 <a href="/" class="navbar-item" alt="Home"> Home <!-- Home -->
-                        </a>
+                    
+                </a>
                 <a href="rsvp.html" class="navbar-item" alt="RSVP"> RSVP <!-- RSVP -->
-                        </a>
+
+                </a>
                 <a href="about.html" class="navbar-item" alt="About"> About <!-- About -->
-                        </a>
+
+                </a>
+                <a href="addresses.html" class="navbar-item" alt="Addresses"> Addresses
+
+                </a>
             </div>
 
         </div>
@@ -65,24 +71,36 @@
                         </div>
                         <div class="columns">
                             <div class="column is-narrow">
-                                <label class="label attendingLabel"> Are you attending?
+                                <label class="label attendingLabel"> Will you be joining us?
                         <!-- <input type="checkbox" class="checkbox attendingBox" name="Attending" id="attendingCheck" checked> -->
                             </div>
                             <div class="column is-narrow">
-                                <label class="label"><input type="radio" class="radio attendingRadio" id="attendingRadioYes" name="Attending" checked>Yes</label>
+                                <label class="label"><input type="radio" class="radio attendingRadio" id="attendingRadioYes" name="Attending">Yes</label>
                             </div>
                             <div class="column is-narrow">
                                 <label class="label"><input type="radio" class="radio attendingRadio" id="attendingRadioNo" name="Attending">No</label>
                             </div>
                             </label>
                         </div>
+                        <div class="columns">
+                            <div class="field">
+                                <div class="formClass">
+                                    <div class="column is-narrow">
+                                        <label class="label">Total Adults (above the age of 18)
+                                    <input type="number" class="input" id="adultCountInput" name="AdultCount" min="0" max="10" required>
+                                </label>
+                                    </div>
+                                    <div class="column is-narrow">
+                                        <label class="label">Total Children
+                                    <input type="number" class="input" id="childCountInput" name="ChildCount" min="0" max="10" required>
+                                </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-
-                        <label id="childCheckBoxLabel" class="childCheckBox childCheckBoxLabel label formClass">Child?
-                                <input type="checkbox" class="childCheckBox formClass" id="childCheckBox" name="Child">
-                            </label>
                         <div class="field">
-                            <div class="select childSelect formClass">
+                            <div class="select formClass">
                                 <select type="text" class="mealOption formClass" id="mealOption" name="Meal" required>
                                     <option class="mealOption" id="mealOptionSteak" value="Steak">Steak</option>
                                     <option class="mealOption" id="mealOptionFish" value="Fish">Fish</option>
@@ -95,8 +113,9 @@
                                 <input type="checkbox" class="allergiesCheckBox checkbox formClass" id="allergiesCheckBox"></label>
                         <input type="text" id="allergiesTextInput" class="allergiesTextInput input formClass" name="Allergies" style="display:none">
 
+                        <textarea class="textarea formClass" id="notesText" name="Notes" placeholder="Any notes go here"></textarea>
 
-                        <input type="submit" id="nameFormSubmit" class="nameFormSubmit button" onclick="validateForm()">
+                        <input type="submit" id="nameFormSubmit" class="nameFormSubmit button">
                     </form>
                 </div>
             </div>
@@ -134,22 +153,6 @@
                                     <p class="title is-3">6</p>
                                     <input type="radio" name="peopleAttending" value="6" class="peopleAttending">
                                 </div>
-                                <div class="column">
-                                    <p class="title is-3">7</p>
-                                    <input type="radio" name="peopleAttending" value="7" class="peopleAttending">
-                                </div>
-                                <div class="column">
-                                    <p class="title is-3">8</p>
-                                    <input type="radio" name="peopleAttending" value="8" class="peopleAttending">
-                                </div>
-                                <div class="column">
-                                    <p class="title is-3">9</p>
-                                    <input type="radio" name="peopleAttending" value="9" class="peopleAttending">
-                                </div>
-                                <div class="column">
-                                    <p class="title is-3">10</p>
-                                    <input type="radio" name="peopleAttending" value="10" class="peopleAttending">
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -184,10 +187,10 @@
                         </a>
                     </div>
                     <div class="column is-narrow">
-                        <a href="https://sammybbarmitzvah.github.io/wazeapi.html" class="footerButton button">
+                        <a href="https://sammybbarmitzvah.github.io/addresses.html" class="footerButton button">
                             <span class="icon" style="margin-right: 1px;">
                                                                     <i class="fas fa-map-marker-alt"></i>
-                                                                </span>Directions
+                                                                </span>Addresses
                         </a>
                     </div>
                     <!--

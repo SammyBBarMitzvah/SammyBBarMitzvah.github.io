@@ -1,9 +1,10 @@
 var allergies = document.getElementById('allergiesCheckBox');
 var allergiesText = document.getElementById('allergiesTextInput');
-var child = document.getElementById('childCheckBox');
 var meal = document.getElementById('mealOption');
 var attendingYes = document.getElementById('attendingRadioYes')
-var attendingNo = document.getElementById('attendingRadioNo')
+var attendingNo = document.getElementById('attendingRadioNo');
+var adultCount = document.getElementById('adultCountInput');
+var childCount = document.getElementById('childCountInput')
 
 
 // Toggle the required modifer on forms
@@ -12,42 +13,36 @@ function toggleRequired(e) {
 }
 
 
+$(document).ready(function() {
+    $('.formClass').hide();
+});
+
+
 // Adding Allergies box when allergies is checked and requiring it
 $(allergies).click(function() {
     $(allergiesText).slideToggle(300);
     toggleRequired(allergiesText);
 });
 
-//Removing meal option if child is checked
-$(child).click(function() {
-    if ($(this).is(':checked')) {
-        $('.childSelect').fadeOut(300);
-        meal.selectedIndex = 3;
 
-    } else {
-        $('.childSelect').show();
-        meal.selectedIndex = 0;
-    }
-});
+
 
 $(attendingYes).click(function() {
     if ($(this).is(':checked')) {
+        attendingYes.value = 'True'
         $('.formClass').fadeIn(400);
         $('#allergiesTextInput').hide();
         if ($(allergies).is(':checked') && $(allergiesText).is(':hidden')) {
             $(allergiesText).show();
         }
-        if ($(child).is(':checked') && $('.childSelect').is(':visible')) {
-            $('.childSelect').hide();
-        }
-    } else {
-        $('.formClass').fadeIn(300);
-
     }
 });
 
 
 $(attendingNo).click(function() {
+    attendingNo.value = 'False'
+    toggleRequired(adultCount);
+    toggleRequired(childCount);
     $('.formClass').fadeOut(400);
     $('#allergiesTextInput').hide();
     if ($(allergies).is(':checked') && $(allergiesText).is(':hidden')) {
