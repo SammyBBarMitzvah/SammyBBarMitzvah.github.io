@@ -47,7 +47,7 @@
             <div class="box">
                 <div class="inputForm">
                     <form id="gform" class="inputForm" name="inputFormForm" method="POST" action="https://script.google.com/macros/s/AKfycbx_QKRztLhjSnNBLC1an5k14JxD7Txkt80wWzY1FeLu22g8lc2-/exec" autocomplete="off">
-                        <div class="columns is-multiline is-mobile">
+                        <div class="columns is-multiline is-mobile formAction1">
                             <div class="column is-narrow">
                                 <div class="select">
                                     <select type="text" id="prefixNameFormInput" name="Prefix" class="prefixNameFormInput nameFormInput" required>
@@ -58,21 +58,21 @@
                                 </div>
                             </div>
                             <div class="column">
-                                <input type="text" id="firstNameFormInput" name="FirstName" class="nameFormInput input" placeholder="First Name" required>
+                                <input type="text" id="firstNameFormInput" name="FirstName" class="nameFormInput input" placeholder="First Name" autocomplete="given-name" required>
                             </div>
                             <div class="column">
-                                <input type="text" id="lastNameFormInput" name="LastName" class="nameFormInput input" placeholder="Last Name" required>
+                                <input type="text" id="lastNameFormInput" name="LastName" class="nameFormInput input" placeholder="Last Name" autocomplete="family-name" required>
                             </div>
                         </div>
-                        <div class="columns">
+                        <div class="columns formAction1">
                             <div class="column">
-                                <input type="email" class="input" name="Email" id="emailInput" placeholder="Email" required>
+                                <input type="email" class="input" name="Email" id="emailInput" placeholder="Email" autocomplete="email" required>
                             </div>
                         </div>
-                        <div class="columns">
+                        <div class="columns formAction1">
                             <div class="column is-narrow">
-                                <label class="label attendingLabel"> Will you be joining us?
-                        <!-- <input type="checkbox" class="checkbox attendingBox" name="Attending" id="attendingCheck" checked> -->
+                                <label class="label attendingLabel"> Will you be joining us?</label>
+                                <!-- <input type="checkbox" class="checkbox attendingBox" name="Attending" id="attendingCheck" checked> -->
                             </div>
                             <div class="column is-narrow">
                                 <label class="label"><input type="radio" class="radio attendingRadio" id="attendingRadioYes" name="Attending">Yes</label>
@@ -80,92 +80,63 @@
                             <div class="column is-narrow">
                                 <label class="label"><input type="radio" class="radio attendingRadio" id="attendingRadioNo" name="Attending">No</label>
                             </div>
-                            </label>
+
                         </div>
-                        <div class="columns">
+                        <div class="columns formAction1">
                             <div class="field">
                                 <div class="formClass">
                                     <div class="column is-narrow">
-                                        <label class="label">Total Adults (above the age of 18)
-                                    <input type="number" class="input" id="adultCountInput" name="AdultCount" min="0" max="10" required>
-                                </label>
+                                        <label class="label">Total Adults (above the age of 18)</label>
+                                        <input type="number" class="input" id="adultCountInput" name="AdultCount" min="0" max="10" value="0" required>
+
                                     </div>
                                     <div class="column is-narrow">
-                                        <label class="label">Total Children
-                                    <input type="number" class="input" id="childCountInput" name="ChildCount" min="0" max="10" required>
-                                </label>
+                                        <label class="label">Total Children</label>
+                                        <input type="number" class="input" id="childCountInput" name="ChildCount" min="0" max="10" value="0" required>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="field">
-                            <div class="select formClass">
-                                <select type="text" class="mealOption formClass" id="mealOption" name="Meal" required>
-                                    <option class="mealOption" id="mealOptionSteak" value="Steak">Steak</option>
-                                    <option class="mealOption" id="mealOptionFish" value="Fish">Fish</option>
-                                    <option class="mealOption" id="mealOptionVeg" value="Vegetarian">Vegetarian</option>
-                                    <option class="mealOption mealOptionChild" id="mealOptionChild" value="" style="display:none"></option>
-                                </select>
+                        <input type="button" class="button nextButton is-primary formClass formAction1" id="form1Button" value="Next"></input>
+
+                        <div class="columns formAction2">
+
+                            <!-- <div class="mealOptions"> -->
+                            <div class="column">
+                                <label class="label">Steak:</label>
+                                <input type="number" class="mealOption input" id="mealOptionSteak" name="Steak" max="" min="0" value="0">
+
                             </div>
+                            <div class="column">
+                                <label class="label">Fish:</label>
+                                <input type="number" class="mealOption input" id="mealOptionFish" name="Fish" max="" min="0" value="0">
+
+                            </div>
+                            <div class="column">
+                                <label class="label">Vegetarian:</label>
+                                <input type="number" class="mealOption input" id="mealOptionVegetarian" name="Vegetarian" max="" min="0" value="0">
+
+                            </div>
+
                         </div>
-                        <label id="allergiesCheckBoxLabel" class="allergiesCheckBox allergiesCheckBoxLabel label formClass">Allergies?
-                                <input type="checkbox" class="allergiesCheckBox checkbox formClass" id="allergiesCheckBox"></label>
-                        <input type="text" id="allergiesTextInput" class="allergiesTextInput input formClass" name="Allergies" style="display:none">
+                        <label id="allergiesCheckBoxLabel" class="allergiesCheckBox allergiesCheckBoxLabel label formClass formAction2" for="allergiesCheckBox">Allergies?</label>
+                        <input type="checkbox" class="allergiesCheckBox checkbox formClass formAction2" id="allergiesCheckBox">
+                        <input type="text" id="allergiesTextInput" class="allergiesTextInput input formClass formAction2" name="Allergies" style="display:none">
 
-                        <textarea class="textarea formClass" id="notesText" name="Notes" placeholder="Any notes go here"></textarea>
+                        <textarea class="textarea formClass formAction2" id="notesText" name="Notes" placeholder="Any notes go here"></textarea>
 
-                        <input type="submit" id="nameFormSubmit" class="nameFormSubmit button">
+                        <input type="submit" id="nameFormSubmit" class="nameFormSubmit button is-primary formAction2">
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div id="modal" class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-                <form id="sliderForm" name="sliderForm">
-                    <div class="block">
-                        <div class="box">
-                            <div class="columns">
-                                <div class="column">
-                                    <p class="title is-3">1</p>
-                                    <input type="radio" name="peopleAttending" value="1" class="peopleAttending">
-                                </div>
-                                <div class="column">
-                                    <p class="title is-3">2</p>
-                                    <input type="radio" name="peopleAttending" value="2" class="peopleAttending">
-                                </div>
-                                <div class="column">
-                                    <p class="title is-3">3</p>
-                                    <input type="radio" name="peopleAttending" value="3" class="peopleAttending">
-                                </div>
-                                <div class="column">
-                                    <p class="title is-3">4</p>
-                                    <input type="radio" name="peopleAttending" value="4" class="peopleAttending">
-                                </div>
-                                <div class="column">
-                                    <p class="title is-3">5</p>
-                                    <input type="radio" name="peopleAttending" value="5" class="peopleAttending">
-                                </div>
-                                <div class="column">
-                                    <p class="title is-3">6</p>
-                                    <input type="radio" name="peopleAttending" value="6" class="peopleAttending">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <input type="range" min="1" max="10" value="1" class="sliderForm slider" id="slider" name="peopleAttending"> -->
-                    <input type="submit" value="Confirm" id="submitSlider" class="sliderForm sliderFormButton button is-primary">
-                </form>
-            </div>
-        </div>
-    </div>
 
 
 
-    <a class="button is-large modal-button" data-target="modal" id="modalOpen">Open Modal</a>
+
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -180,7 +151,7 @@
                         </a>
                     </div>
                     <div class="column is-narrow">
-                        <a href="mailto:joshuaebeck@gmail.com?cc=lauriezbeck@gmail.com&subject=Sammy's%20Barmitzvah" class="footerButton button">
+                        <a href="mailto:joshuaebeck@gmail.com?cc=lauriezbeck@gmail.com&subject=Sammy's%20Bar%20mitzvah" class="footerButton button">
                             <span class="icon" style="margin-right: 0.5;margin-right: 1px;">
                                 <i class="far fa-envelope"> </i>
                             </span> Email
