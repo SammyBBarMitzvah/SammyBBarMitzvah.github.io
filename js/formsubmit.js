@@ -1,9 +1,20 @@
+function validateHuman(honeypot) {
+    if (honeypot) { //if hidden form filled up
+        console.log("Robot Detected!");
+        return true;
+    } else {
+        return false
+    }
+}
+
+
+
 function getFormData() {
     var form = document.getElementById('gform');
     var elements = form.elements; // all form elements
 
     var fields = Object.keys(elements).map(function(k) {
-        if (elements[k].name !== undefined) {
+        if (elements[k].name !== "honeypot") {
             return elements[k].name;
             // special case for Edge's html collection
         } else if (elements[k].length > 0) {
@@ -55,7 +66,8 @@ function handleFormSubmit(event) { // handles form submit withtout any jquery
     xhr.onreadystatechange = function() {
         console.log(xhr.status, xhr.statusText)
         console.log(xhr.responseText);
-        document.getElementById('gform').style.display = 'none'; // hide form
+        document.getElementById('entireForm').style.display = 'none'; // hide form
+        document.getElementById('formSubmittedMessage').style.display = 'block';
         return;
     };
 

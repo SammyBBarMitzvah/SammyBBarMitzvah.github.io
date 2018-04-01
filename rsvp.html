@@ -42,11 +42,11 @@
     </nav>
 
 
-    <div class="container">
+    <div class="container" id="entireForm">
         <div class="block">
             <div class="box">
                 <div class="inputForm">
-                    <form id="gform" class="inputForm" name="inputFormForm" method="POST" action="https://script.google.com/macros/s/AKfycbx_QKRztLhjSnNBLC1an5k14JxD7Txkt80wWzY1FeLu22g8lc2-/exec" autocomplete="off">
+                    <form id="gform" class="inputForm" name="inputFormForm" method="POST" action="https://script.google.com/macros/s/AKfycbx_QKRztLhjSnNBLC1an5k14JxD7Txkt80wWzY1FeLu22g8lc2-/exec">
                         <div class="columns is-multiline is-mobile formAction1">
                             <div class="column is-narrow">
                                 <div class="select">
@@ -58,7 +58,7 @@
                                 </div>
                             </div>
                             <div class="column">
-                                <input type="text" id="firstNameFormInput" name="FirstName" class="nameFormInput input" placeholder="First Name" autocomplete="given-name" required>
+                                <input type="text" id="firstNameFormInput" name="FirstName" class="nameFormInput input" placeholder="First Name" autocomplete="given-name" title="Please fill this out properly" required>
                             </div>
                             <div class="column">
                                 <input type="text" id="lastNameFormInput" name="LastName" class="nameFormInput input" placeholder="Last Name" autocomplete="family-name" required>
@@ -99,34 +99,43 @@
                             </div>
                         </div>
 
-                        <input type="button" class="button nextButton is-primary formClass formAction1" id="form1Button" value="Next"></input>
+                        <input type="button" class="button nextButton is-primary formClass formAction1" id="form1Button" value="Next">
 
-                        <div class="columns formAction2">
+                        <div class="formAction2 formClass">
+                            <input type="text" class="input" id="namesInput" name="Names" placeholder="Names of those attending. Please seperate with commas" autocomplete="given-name" style="margin-bottom: 20px;" required>
+                        </div>
 
-                            <!-- <div class="mealOptions"> -->
-                            <div class="column">
+                        <div class="columns formAction2" id="mealsDiv">
+
+                            <div class="column mealOption">
                                 <label class="label">Steak:</label>
-                                <input type="number" class="mealOption input" id="mealOptionSteak" name="Steak" max="" min="0" value="0">
+                                <input type="number" class="input" id="mealOptionSteak" name="Steak" max="10" min="0" value="0">
 
                             </div>
-                            <div class="column">
+                            <div class="column mealOption">
                                 <label class="label">Fish:</label>
-                                <input type="number" class="mealOption input" id="mealOptionFish" name="Fish" max="" min="0" value="0">
+                                <input type="number" class="input" id="mealOptionFish" name="Fish" max="10" min="0" value="0">
 
                             </div>
-                            <div class="column">
+                            <div class="column mealOption">
                                 <label class="label">Vegetarian:</label>
-                                <input type="number" class="mealOption input" id="mealOptionVegetarian" name="Vegetarian" max="" min="0" value="0">
+                                <input type="number" class="input" id="mealOptionVegetarian" name="Vegetarian" max="10" min="0" value="0">
 
                             </div>
 
                         </div>
-                        <label id="allergiesCheckBoxLabel" class="allergiesCheckBox allergiesCheckBoxLabel label formClass formAction2" for="allergiesCheckBox">Allergies?</label>
-                        <input type="checkbox" class="allergiesCheckBox checkbox formClass formAction2" id="allergiesCheckBox">
+                        <div class="allergieItems columns">
+                            <div class="column is-narrow">
+                                <label id="allergiesCheckBoxLabel" class="allergiesCheckBox allergiesCheckBoxLabel label formClass formAction2" for="allergiesCheckBox">Allergies?</label>
+                            </div>
+                            <div class="column is-narrow">
+                                <input type="checkbox" class="allergiesCheckBox checkbox formClass formAction2" id="allergiesCheckBox">
+                            </div>
+                        </div>
                         <input type="text" id="allergiesTextInput" class="allergiesTextInput input formClass formAction2" name="Allergies" style="display:none">
 
-                        <textarea class="textarea formClass formAction2" id="notesText" name="Notes" placeholder="Any notes go here"></textarea>
-
+                        <textarea class="textarea formClass formAction2" id="notesText" name="Notes" placeholder="Any notes go here" style="margin-top: 20px;margin-bottom: 20px;"></textarea>
+                        <input id="honeypot" type="text" name="honeypot" value="" style="display: none;">
                         <input type="submit" id="nameFormSubmit" class="nameFormSubmit button is-primary formAction2">
                     </form>
                 </div>
@@ -134,7 +143,19 @@
         </div>
     </div>
 
+    <div class="container" id="formSubmittedMessage" style="display:none;">
+        <article class="message is-success">
+            <div class="message-header">
+                <p>Success!</p>
+            </div>
+            <div class="message-body">
+                <p>Your RSVP has gone through!</p>
+                <br />
+                <p>While you're here, why don't you check out our other pages, like our <a href="about.html">About</a> page.</p>
+            </div>
 
+        </article>
+    </div>
 
 
 
