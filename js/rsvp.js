@@ -79,7 +79,7 @@ function hideMeals() {
 $(document).ready(function() {
     $(formClass).hide();
     $(formAction2).hide();
-    while (checkVisible(formAction1)) {
+    while (checkVisible(formAction2)) {
         $(formAction2).hide();
     }
 });
