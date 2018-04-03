@@ -58,7 +58,12 @@ function checkValidation() {
     return true;
 }
 
-
+function checkVisible(e) {
+    if ($(e).is(':hidden')) {
+        return false;
+    }
+    return true;
+}
 
 function hideMeals() {
     var adults = adultCount.value;
@@ -73,6 +78,9 @@ function hideMeals() {
 $(document).ready(function() {
     $(formClass).hide();
     $(formAction2).hide();
+    while (checkVisible(formAction1)) {
+        $(formAction2).hide();
+    }
 });
 
 
