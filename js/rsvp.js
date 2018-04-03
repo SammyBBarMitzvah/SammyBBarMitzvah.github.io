@@ -10,9 +10,10 @@ var allergies = document.getElementById('allergiesCheckBox');
 var allergiesText = document.getElementById('allergiesTextInput');
 
 //Attending
-
 var attendingYes = document.getElementById('attendingRadioYes');
 var attendingNo = document.getElementById('attendingRadioNo');
+var attendingYesLabel = document.getElementById('attendingRadioYesLabel');
+var attendingNoLabel = document.getElementById('attendingRadioNoLabel');
 
 //Form Classes
 var formClass = document.getElementsByClassName('formClass');
@@ -130,6 +131,11 @@ $(attendingYes).click(function() {
             $(allergiesText).show();
         }
     }
+});
+
+$(attendingYesLabel).click(function(){
+    $(attendingYes).prop('checked', true);
+    $(formAction2).hide();
 });
 
 
