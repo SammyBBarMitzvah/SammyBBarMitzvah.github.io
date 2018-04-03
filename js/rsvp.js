@@ -134,7 +134,6 @@ $(attendingYes).click(function() {
 });
 
 $(attendingYesLabel).click(function(){
-    $(attendingYes).prop('checked', true);
     $(formAction2).hide();
 });
 
