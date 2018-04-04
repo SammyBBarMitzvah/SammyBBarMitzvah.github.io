@@ -10,9 +10,10 @@ var allergies = document.getElementById('allergiesCheckBox');
 var allergiesText = document.getElementById('allergiesTextInput');
 
 //Attending
-
 var attendingYes = document.getElementById('attendingRadioYes');
 var attendingNo = document.getElementById('attendingRadioNo');
+var attendingYesLabel = document.getElementById('attendingRadioYesLabel');
+var attendingNoLabel = document.getElementById('attendingRadioNoLabel');
 
 //Form Classes
 var formClass = document.getElementsByClassName('formClass');
@@ -63,6 +64,9 @@ function getMealCount() {
 $(document).ready(function() {
     $(formClass).hide();
     $(formAction2).hide();
+    while (checkVisible(formAction2) && checkVisible(formAction1)) {
+        $(formAction2).hide();
+    }
 });
 
 
@@ -108,6 +112,10 @@ $(attendingYes).click(function() {
             $(allergiesText).show();
         }
     }
+});
+
+$(attendingYesLabel).click(function() {
+    $(formAction2).hide();
 });
 
 
