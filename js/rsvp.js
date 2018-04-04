@@ -19,34 +19,24 @@ var formClass = document.getElementsByClassName('formClass');
 var formAction1 = document.getElementsByClassName('formAction1');
 var formAction2 = document.getElementsByClassName('formAction2')
 
-//Meals
-var steak = document.getElementById('mealOptionSteak');
-var fish = document.getElementById('mealOptionFish');
-var vegetarian = document.getElementById('mealOptionVegetarian');
-
 //Extras
 var adultCount = document.getElementById('adultCountInput');
 var childCount = document.getElementById('childCountInput');
 var formNext = document.getElementById('form1Button');
 
-
+//Name Inputs and Meals
+var mealClasses = document.getElementsByClassName('mealClasses');
+var nameInput1 = document.getElementById('nameInput1');
+var nameInput2 = document.getElementById('nameInput2');
+var nameInput3 = document.getElementById('nameInput3');
+var nameInput4 = document.getElementById('nameInput4');
+var nameInput5 = document.getElementById('nameInput5');
 
 // Toggle the required modifer on forms
 function toggleRequired(e) {
     $(e).prop('required', !$(e).prop('required'));
 }
 
-// Compare meals to those attending
-function getTotals() {
-    var a = parseInt(steak.value);
-    var b = parseInt(fish.value);
-    var c = parseInt(vegetarian.value);
-    var d = a + b + c;
-    if (d !== parseInt(adultCount.value)) {
-        return false;
-    }
-    return true;
-}
 
 function checkValidation() {
     var adults = adultCount.value;
@@ -58,16 +48,16 @@ function checkValidation() {
     return true;
 }
 
+function getMealCount() {
+    var adults = parseInt(adultCount.value);
+    var children = parseInt(childCount.value);
 
-
-function hideMeals() {
-    var adults = adultCount.value;
-    var children = childCount.value;
-
-    if (adults === "0" && children > "0") {
-        $('.mealOption').hide();
+    for (let i = 0; i < adults; i++) {
+        $(`nameInput ${i}`).show();
     }
 }
+
+
 
 
 $(document).ready(function() {
@@ -87,13 +77,7 @@ $(submitButton).click(function() {
     if ($(attendingNo).is(':checked')) {
         return true;
     }
-    if (getTotals()) {
-        console.log('Right amount');
-        return true;
-    } else {
-        console.log('Not the right amount');
-        return false;
-    }
+
 
 });
 
@@ -103,9 +87,11 @@ $(formNext).click(function() {
         $(formAction1).show();
         alert('Oops! It seems you have forgotten something!');
     } else {
+
         $(formAction1).fadeOut(400);
-        hideMeals();
         $(formAction2).fadeIn(500);
+        $(mealClasses).hide();
+        getMealCount();
         $(allergiesText).hide();
     }
 
@@ -129,14 +115,10 @@ $(attendingNo).click(function() {
     //Setting values for readability in Spreadsheet
     attendingNo.value = 'False';
     adultCount.value = '';
-    steak.value = '';
-    fish.value = '';
-    vegetarian.value = '';
     childCount.value = '';
 
     toggleRequired(adultCount);
     toggleRequired(childCount);
-    toggleRequired(namesInput);
     $(formClass).fadeOut(400);
     $(submitButton).fadeIn(300);
     $('#allergiesTextInput').hide();
