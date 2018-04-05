@@ -39,7 +39,7 @@ function toggleRequired(e) {
 }
 
 function checkVisible(e) {
-    if ($(e).is(':hidden') {
+    if ($(e).is(':hidden')) {
         return false;
         }
         return true;
