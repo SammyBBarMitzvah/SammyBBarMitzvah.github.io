@@ -38,6 +38,13 @@ function toggleRequired(e) {
     $(e).prop('required', !$(e).prop('required'));
 }
 
+function checkVisible(e) {
+    if ($(e).is(':hidden') {
+        return false;
+        }
+        return true;
+}
+
 
 function checkValidation() {
     var adults = adultCount.value;
@@ -54,10 +61,9 @@ function getMealCount() {
     var children = parseInt(childCount.value);
 
     for (let i = 0; i < adults; i++) {
-        $(`nameInput ${i}`).show();
+        console.log($(`nameInput${i}`));
     }
 }
-
 
 
 
