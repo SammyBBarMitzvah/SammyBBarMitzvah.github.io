@@ -62,7 +62,7 @@ function getMealCount() {
 
     for (let i = 1; i < adults + 1; i++) {
         console.log(`nameInput${i}`);
-        $(`nameInput${i}`).show();
+        document.getElementById(`nameInput${i}`).style.display = "block";
     }
 }
 
