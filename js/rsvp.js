@@ -60,8 +60,9 @@ function getMealCount() {
     var adults = parseInt(adultCount.value);
     var children = parseInt(childCount.value);
 
-    for (let i = 1; i < adults; i++) {
+    for (let i = 1; i < adults + 1; i++) {
         console.log(`nameInput${i}`);
+        $(`nameInput${i}`).show();
     }
 }
 
