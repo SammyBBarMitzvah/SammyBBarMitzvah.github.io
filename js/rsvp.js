@@ -32,6 +32,8 @@ var nameInput2 = document.getElementById('nameInput2');
 var nameInput3 = document.getElementById('nameInput3');
 var nameInput4 = document.getElementById('nameInput4');
 var nameInput5 = document.getElementById('nameInput5');
+var nameInput6 = document.getElementById('nameInput6');
+var nameInput7 = document.getElementById('nameInput7');
 
 // Toggle the required modifer on forms
 function toggleRequired(e) {
