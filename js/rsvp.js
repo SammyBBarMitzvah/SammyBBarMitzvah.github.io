@@ -63,6 +63,7 @@ function getMealCount() {
     for (let i = 1; i < adults + 1; i++) {
         console.log(`nameInput${i}`);
         document.getElementById(`nameInput${i}`).style.display = "block";
+        toggleRequired(`nameInput${i}`);
     }
 }
 
