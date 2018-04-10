@@ -6,7 +6,6 @@
 
 [Bulma](https://bulma.io/documentation/elements/box/)
 
-[Pagination](https://bulma.io/documentation/components/pagination/)
 
 [Footer Idea](https://tutorialzine.com/media/2015/01/large.jpg)
 
