@@ -84,10 +84,15 @@ function getMealCount() {
 
     for (let i = 1; i < adults + 1; i++) {
         let max = 7;
-        if (i > max) console.log(`${i} is too much.`);
-        console.log(`nameInput${i}`);
-        $(`#nameInput${i}`).show();
-        toggleRequired(`#nameInput${i}`);
+        if (i < max) {
+            console.log(`nameInput${i}`);
+            $(`#nameInput${i}`).show();
+            toggleRequired(`#nameInput${i}`);
+        } else {
+            console.log(`${i} is too many people for our system!`);
+            alert(`${i} is too many people for our system!`);
+            
+        }
     }
 }
 
