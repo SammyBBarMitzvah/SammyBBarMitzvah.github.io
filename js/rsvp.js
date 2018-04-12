@@ -83,9 +83,11 @@ function getMealCount() {
     var children = parseInt(childCount.value);
 
     for (let i = 1; i < adults + 1; i++) {
+        let max = 7;
+        if (i > max) console.log(`${i} is too much.`);
         console.log(`nameInput${i}`);
         $(`#nameInput${i}`).show();
-        toggleRequired(`nameInput${i}`);
+        toggleRequired(`#nameInput${i}`);
     }
 }
 
