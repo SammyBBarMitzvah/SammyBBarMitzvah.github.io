@@ -35,17 +35,37 @@ var nameInput5 = document.getElementById('nameInput5');
 var nameInput6 = document.getElementById('nameInput6');
 var nameInput7 = document.getElementById('nameInput7');
 
+var mealOption1 = document.getElementById('mealOption1');
+var mealOption2 = document.getElementById('mealOption2');
+var mealOption3 = document.getElementById('mealOption3');
+var mealOption4 = document.getElementById('mealOption4');
+var mealOption5 = document.getElementById('mealOption5');
+var mealOption6 = document.getElementById('mealOption6');
+var mealOption7 = document.getElementById('mealOption7');
+
+
+
+
 // Toggle the required modifer on forms
 function toggleRequired(e) {
     $(e).prop('required', !$(e).prop('required'));
 }
 
+function emptyValue(e) {
+    e.value = '';
+}
+
+function setValueSteak(e) {
+    e.selectedIndex = '0'
+}
+
 function checkVisible(e) {
     if ($(e).is(':hidden')) {
         return false;
-        }
-        return true;
+    }
+    return true;
 }
+
 
 
 function checkValidation() {
@@ -65,6 +85,9 @@ function getMealCount() {
     for (let i = 1; i < adults + 1; i++) {
         console.log(`nameInput${i}`);
         document.getElementById(`nameInput${i}`).style.display = "block";
+        document.getElementById(`mealOption${i}`).style.cssFloat = "right";
+        //document.getElementById(`namesInput${i}`).style.cssFloat = "left";
+
         toggleRequired(`nameInput${i}`);
     }
 }
@@ -115,6 +138,7 @@ $(formNext).click(function() {
 $(attendingYes).click(function() {
     if ($(this).is(':checked')) {
         attendingYes.value = 'True'
+        setValueSteak(mealOption1);
         $(formClass).fadeIn(400);
         $(formAction2).hide();
         $('#allergiesTextInput').hide();
@@ -126,17 +150,28 @@ $(attendingYes).click(function() {
 
 $(attendingYesLabel).click(function() {
     $(formAction2).hide();
+
 });
 
 
 $(attendingNo).click(function() {
     //Setting values for readability in Spreadsheet
     attendingNo.value = 'False';
-    adultCount.value = '';
-    childCount.value = '';
+
+    emptyValue(adultCount);
+    emptyValue(childCount);
+    emptyValue(mealOption1);
+    emptyValue(mealOption2);
+    emptyValue(mealOption3);
+    emptyValue(mealOption4);
+    emptyValue(mealOption5);
+    emptyValue(mealOption6);
+    emptyValue(mealOption7);
+
 
     toggleRequired(adultCount);
     toggleRequired(childCount);
+
     $(formClass).fadeOut(400);
     $(submitButton).fadeIn(300);
     $('#allergiesTextInput').hide();
