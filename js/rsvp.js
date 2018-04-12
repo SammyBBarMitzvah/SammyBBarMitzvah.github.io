@@ -84,10 +84,7 @@ function getMealCount() {
 
     for (let i = 1; i < adults + 1; i++) {
         console.log(`nameInput${i}`);
-        document.getElementById(`nameInput${i}`).style.display = "block";
-        document.getElementById(`mealOption${i}`).style.cssFloat = "right";
-        //document.getElementById(`namesInput${i}`).style.cssFloat = "left";
-
+        $(`#nameInput${i}`).show();
         toggleRequired(`nameInput${i}`);
     }
 }
