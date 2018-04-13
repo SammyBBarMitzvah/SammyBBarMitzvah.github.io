@@ -51,14 +51,17 @@ function toggleRequired(e) {
     $(e).prop('required', !$(e).prop('required'));
 }
 
+// Sets a value to empty
 function emptyValue(e) {
     e.value = '';
 }
 
+// Resets the food value (Default: Steak)
 function setValueSteak(e) {
     e.selectedIndex = '0'
 }
 
+// Checks if an element is Visible
 function checkVisible(e) {
     if ($(e).is(':hidden')) {
         return false;
@@ -67,7 +70,7 @@ function checkVisible(e) {
 }
 
 
-
+// Checks if an element is not filled out *Only works if YES is clicked, otherwise the browsers default will check*
 function checkValidation() {
     var adults = adultCount.value;
     var children = childCount.value;
@@ -78,6 +81,7 @@ function checkValidation() {
     return true;
 }
 
+// Gets how many adult meals to show based on number of adults attending
 function getMealCount() {
     var adults = parseInt(adultCount.value);
     var children = parseInt(childCount.value);
@@ -90,7 +94,7 @@ function getMealCount() {
 }
 
 
-
+// Hiding elements when the webpage loads
 $(document).ready(function() {
     $(formClass).hide();
     $(formAction2).hide();
@@ -106,7 +110,7 @@ $(allergies).click(function() {
     toggleRequired(allergiesText);
 });
 
-
+// Allows for submit when 'No' is checked
 $(submitButton).click(function() {
     if ($(attendingNo).is(':checked')) {
         return true;
@@ -115,34 +119,31 @@ $(submitButton).click(function() {
 
 });
 
-
+// Checks for if all the elements are clicked when 'Yes' and 'Next' are clicked
 $(formNext).click(function() {
     if (!checkValidation()) {
         $(formAction1).show();
         alert('Oops! It seems you have forgotten something!');
     } else {
-
         $(formAction1).fadeOut(400);
         $(formAction2).fadeIn(500);
         $(mealClasses).hide();
         getMealCount();
         $(allergiesText).hide();
     }
-
 });
 
 
 $(attendingYes).click(function() {
-    if ($(this).is(':checked')) {
+        $(formAction2).hide();
         attendingYes.value = 'True'
         setValueSteak(mealOption1);
         $(formClass).fadeIn(400);
-        $(formAction2).hide();
+
         $('#allergiesTextInput').hide();
         if ($(allergies).is(':checked') && $(allergiesText).is(':hidden')) {
             $(allergiesText).show();
         }
-    }
 });
 
 $(attendingYesLabel).click(function() {
@@ -150,11 +151,11 @@ $(attendingYesLabel).click(function() {
 
 });
 
-
-$(attendingNo).click(function() {
     //Setting values for readability in Spreadsheet
+$(attendingNo).click(function() {
     attendingNo.value = 'False';
 
+    // Emptying the values for all the items
     emptyValue(adultCount);
     emptyValue(childCount);
     emptyValue(mealOption1);
@@ -165,10 +166,12 @@ $(attendingNo).click(function() {
     emptyValue(mealOption6);
     emptyValue(mealOption7);
 
-
+    // Making submit able to be clicked by toggling the required function
+    
     toggleRequired(adultCount);
     toggleRequired(childCount);
-
+    
+    // Hiding elements and showing the submit button
     $(formClass).fadeOut(400);
     $(submitButton).fadeIn(300);
     $('#allergiesTextInput').hide();
