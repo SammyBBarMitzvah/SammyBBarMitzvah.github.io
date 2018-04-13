@@ -20,3 +20,5 @@
 [Funny Error](https://imgur.com/a/RyeJA)
 
 [Funny Github Error](https://imgur.com/a/PDBRD)
+
+[Adsense](https://www.google.com/adsense)
