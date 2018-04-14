@@ -43,6 +43,16 @@ var mealOption5 = document.getElementById('mealOption5');
 var mealOption6 = document.getElementById('mealOption6');
 var mealOption7 = document.getElementById('mealOption7');
 
+var childInput = document.getElementsByClassName('childInput');
+var childInput1 = document.getElementById('childNameInput1');
+var childInput2 = document.getElementById('childNameInput2');
+var childInput3 = document.getElementById('childNameInput3');
+var childInput4 = document.getElementById('childNameInput4');
+var childInput5 = document.getElementById('childNameInput5');
+var childInput6 = document.getElementById('childNameInput6');
+var childInput7 = document.getElementById('childNameInput7');
+
+
 
 
 
@@ -87,9 +97,15 @@ function getMealCount() {
     var children = parseInt(childCount.value);
 
     for (let i = 1; i < adults + 1; i++) {
-            console.log(`nameInput${i}`);
-            $(`#nameInput${i}`).show();
-            toggleRequired(`#nameInput${i}`);
+        console.log(`nameInput${i}`);
+        $(`#nameInput${i}`).show();
+        toggleRequired(`#namesInput${i}`);
+        toggleRequired(`#mealOption${i}`);
+    }
+    for (let i = 1; i < children + 1; i++) {
+        console.log(`childNameInput${i}`);
+        $(`#childNameInput${i}`).show();
+        toggleRequired(`#childNameInput${i}Name`);
     }
 }
 
@@ -128,6 +144,7 @@ $(formNext).click(function() {
         $(formAction1).fadeOut(400);
         $(formAction2).fadeIn(500);
         $(mealClasses).hide();
+        $(childInput).hide();
         getMealCount();
         $(allergiesText).hide();
     }
@@ -135,15 +152,23 @@ $(formNext).click(function() {
 
 
 $(attendingYes).click(function() {
-        $(formAction2).hide();
-        attendingYes.value = 'True'
-        setValueSteak(mealOption1);
-        $(formClass).fadeIn(400);
+    $(formAction2).hide();
+    attendingYes.value = 'True'
 
-        $('#allergiesTextInput').hide();
-        if ($(allergies).is(':checked') && $(allergiesText).is(':hidden')) {
-            $(allergiesText).show();
-        }
+    emptyValue(mealOption1);
+    emptyValue(mealOption2);
+    emptyValue(mealOption3);
+    emptyValue(mealOption4);
+    emptyValue(mealOption5);
+    emptyValue(mealOption6);
+    emptyValue(mealOption7);
+
+    $(formClass).fadeIn(400);
+
+    $('#allergiesTextInput').hide();
+    if ($(allergies).is(':checked') && $(allergiesText).is(':hidden')) {
+        $(allergiesText).show();
+    }
 });
 
 $(attendingYesLabel).click(function() {
@@ -151,7 +176,7 @@ $(attendingYesLabel).click(function() {
 
 });
 
-    //Setting values for readability in Spreadsheet
+//Setting values for readability in Spreadsheet
 $(attendingNo).click(function() {
     attendingNo.value = 'False';
 
@@ -166,11 +191,13 @@ $(attendingNo).click(function() {
     emptyValue(mealOption6);
     emptyValue(mealOption7);
 
+
+
     // Making submit able to be clicked by toggling the required function
-    
+
     toggleRequired(adultCount);
     toggleRequired(childCount);
-    
+
     // Hiding elements and showing the submit button
     $(formClass).fadeOut(400);
     $(submitButton).fadeIn(300);
