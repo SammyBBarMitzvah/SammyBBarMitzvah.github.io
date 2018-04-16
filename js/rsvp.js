@@ -155,14 +155,6 @@ $(attendingYes).click(function() {
     $(formAction2).hide();
     attendingYes.value = 'True'
 
-    emptyValue(mealOption1);
-    emptyValue(mealOption2);
-    emptyValue(mealOption3);
-    emptyValue(mealOption4);
-    emptyValue(mealOption5);
-    emptyValue(mealOption6);
-    emptyValue(mealOption7);
-
     $(formClass).fadeIn(400);
 
     $('#allergiesTextInput').hide();
