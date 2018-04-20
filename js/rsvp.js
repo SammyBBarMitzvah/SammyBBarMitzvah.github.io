@@ -149,7 +149,7 @@ $(formNext).click(function() {
         $(formAction1).show();
         alert('Oops! It seems you have forgotten something!');
     } else {
-        if (getMaxValues()) {
+        if (checkMaxValues()) {
         $(formAction1).fadeOut(400);
         $(formAction2).fadeIn(500);
         $(mealClasses).hide();
