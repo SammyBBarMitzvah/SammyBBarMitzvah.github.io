@@ -91,14 +91,19 @@ function checkValidation() {
     return true;
 }
 
+function checkMaxValues() {
+    var adults = parseInt(adultCount.value);
+    var children = parseInt(childCount.value);
+     if (children > 7 || adults > 7) {
+        alert('Sorry, we do not support this many adults/children at one time. Please try a lower number.');
+        return false;   
+     }
+    return true;
+}
 // Gets how many adult meals to show based on number of adults attending
 function getMealCount() {
     var adults = parseInt(adultCount.value);
     var children = parseInt(childCount.value);
-    if (children > 7 || adults > 7) {
-        alert('Sorry, we do not support this many adults/children at one time. Please try a lower number.');
-        return false;
-    } else {
     for (let i = 1; i < adults + 1; i++) {
         console.log(`nameInput${i}`);
         $(`#nameInput${i}`).show();
@@ -109,8 +114,6 @@ function getMealCount() {
         console.log(`childNameInput${i}`);
         $(`#childNameInput${i}`).show();
         toggleRequired(`#childNameInput${i}Name`);
-    }
-        return true;
     }
 }
 
@@ -146,12 +149,13 @@ $(formNext).click(function() {
         $(formAction1).show();
         alert('Oops! It seems you have forgotten something!');
     } else {
-        if (getMealCount()) {
+        if (getMaxValues()) {
         $(formAction1).fadeOut(400);
         $(formAction2).fadeIn(500);
         $(mealClasses).hide();
         $(childInput).hide();
         $(allergiesText).hide();
+        getMealCount();
         }
     }
 });
