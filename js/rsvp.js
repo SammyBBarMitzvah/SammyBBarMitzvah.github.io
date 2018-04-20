@@ -110,6 +110,7 @@ function getMealCount() {
         $(`#childNameInput${i}`).show();
         toggleRequired(`#childNameInput${i}Name`);
     }
+        return true;
     }
 }
 
@@ -145,12 +146,13 @@ $(formNext).click(function() {
         $(formAction1).show();
         alert('Oops! It seems you have forgotten something!');
     } else {
+        if (getMealCount()) {
         $(formAction1).fadeOut(400);
         $(formAction2).fadeIn(500);
         $(mealClasses).hide();
         $(childInput).hide();
-        getMealCount();
         $(allergiesText).hide();
+        }
     }
 });
 
