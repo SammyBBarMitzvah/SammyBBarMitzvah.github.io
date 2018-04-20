@@ -59,7 +59,6 @@
         <article class="tile is-child notification is-primary">
           <p class="title">B'nai Shalom of Olney </p>
           <p class="subtitle">18401 Burtfield Dr, Olney, MD 20832</p>
-            <div id="bnaiMap"></div>
         </article>
         </div>
         </div>
@@ -75,19 +74,6 @@
             </div>
         </div>
     </div>
-     <script>
-      function initMap() {
-        var uluru = {lat: 39.1584, lng: 77.0732};
-        var map = new google.maps.Map(document.getElementById('bnaiMap'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
 
     
     
@@ -136,8 +122,6 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/navbarjs.js" type="text/javascript"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4EhDxh0uU84J3HqYKBMBxY5z29QheR6U&callback=initMap">
-    </script>
 </body>
 
 </html>
