@@ -96,7 +96,8 @@ function getMealCount() {
     var adults = parseInt(adultCount.value);
     var children = parseInt(childCount.value);
     if (children > 7 || adults > 7) {
-        alert('Sorry, we do not support this many adults/children at one time. Please try a lower number.')
+        alert('Sorry, we do not support this many adults/children at one time. Please try a lower number.');
+        return false;
     } else {
     for (let i = 1; i < adults + 1; i++) {
         console.log(`nameInput${i}`);
