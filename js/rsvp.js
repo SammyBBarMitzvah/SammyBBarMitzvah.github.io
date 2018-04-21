@@ -94,10 +94,10 @@ function checkValidation() {
 function checkMaxValues() {
     var adults = parseInt(adultCount.value);
     var children = parseInt(childCount.value);
-     if (children > 7 || adults > 7) {
+    if (children > 7 || adults > 7) {
         alert('Sorry, we do not support this many adults/children at one time. Please try a lower number.');
-        return false;   
-     }
+        return false;
+    }
     return true;
 }
 // Gets how many adult meals to show based on number of adults attending
@@ -150,12 +150,12 @@ $(formNext).click(function() {
         alert('Oops! It seems you have forgotten something!');
     } else {
         if (checkMaxValues()) {
-        $(formAction1).fadeOut(400);
-        $(formAction2).fadeIn(500);
-        $(mealClasses).hide();
-        $(childInput).hide();
-        $(allergiesText).hide();
-        getMealCount();
+            $(formAction1).fadeOut(400);
+            $(formAction2).fadeIn(500);
+            $(mealClasses).hide();
+            $(childInput).hide();
+            $(allergiesText).hide();
+            getMealCount();
         }
     }
 });
