@@ -21,6 +21,4 @@
 
 [Funny Github Error](https://imgur.com/a/PDBRD)
 
-[Adsense](https://www.google.com/adsense)
-
-[Beckmitzvah.tk](https://my.freenom.com/clientarea.php)
+[ChromeBook Stuff](https://pastebin.com/3sw6A0zK)
