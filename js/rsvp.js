@@ -85,10 +85,18 @@ function checkValidation() {
     var adults = adultCount.value;
     var children = childCount.value;
 
-    if (firstName.value === "" || lastName.value === "" || emailInput.value === "" || adults === "0" && children === "0") {
+    if (firstName.value === "" || lastName.value === "" || emailInput.value === "" || checkEmail() === false || adults === "0" && children === "0") {
         return false;
     }
     return true;
+}
+
+function checkEmail() {
+    var emails = emailInput.value;
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emails)) {
+        return true;
+    }
+    return false;
 }
 
 function checkMaxValues() {
