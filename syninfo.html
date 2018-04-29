@@ -58,7 +58,36 @@
     <!--MAIN ASPECT -->
     <section class="section">
         <div class="container" style="text-align: center;">
-
+            <p class="title is-1">SYNAGOGUE INFORMATION</p>
+            <p class="title is-3">B'nai Shalom of Olney</p>
+            <p class="subtitle">18401 Burtfield Drive, Olney, MD 20832</p>
+            <p class="subtitle"><a href="https://www.bnaishalomofolney.org">https://www.bnaishalomofolney.org</a></p> <br>
+            <p class="subtitle is-4">Morning services commence at 9:30am, with Sammy’s <i>torah</i> <br> portion beginning at 10:00am. We strongly encourage everyone <br> to be in the sanctuary and in their seats by 9:45am.</p>
+            <!--MAP-->
+            <style>
+                #map {
+                    width: 400px;
+                    height: 400px;
+                    margin: auto;
+                }
+            </style>
+            <div id="map"></div>
+            <script>
+                function initMap() {
+                    var oaks = {
+                        lat: 39.1584,
+                        lng: -77.0732
+                    };
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 10,
+                        center: oaks
+                    });
+                    var marker = new google.maps.Marker({
+                        position: oaks,
+                        map: map
+                    });
+                }
+            </script>
         </div>
     </section>
 
@@ -109,6 +138,7 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/navbarjs.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4EhDxh0uU84J3HqYKBMBxY5z29QheR6U&callback=initMap"></script>
 </body>
 
 </html>
