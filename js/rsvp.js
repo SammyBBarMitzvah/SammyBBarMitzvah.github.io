@@ -171,7 +171,7 @@ $(formNext).click(function() {
 
 $(attendingYes).click(function() {
     $(formAction2).hide();
-    attendingYes.value = 'True'
+    attendingYes.value = 'Yes'
 
     $(formClass).fadeIn(400);
 
@@ -188,7 +188,7 @@ $(attendingYesLabel).click(function() {
 
 //Setting values for readability in Spreadsheet
 $(attendingNo).click(function() {
-    attendingNo.value = 'False';
+    attendingNo.value = 'No';
 
     // Emptying the values for all the items
     emptyValue(adultCount);
